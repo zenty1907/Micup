@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-  
     runs-on: ubuntu-latest
 
     steps:
@@ -22,8 +21,10 @@ jobs:
 
     - name: Bağımlılıkları Yükle
       run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install micup
 
     - name: Botu Başlat
+      env:
+        MICUP_TOKEN: ${{ secrets.MICUP_TOKEN }}
       run: python bot.py
