@@ -1,16 +1,7 @@
-import os
 import micup
 
-token = os.getenv("MICUP_BOT_TOKEN")
+# Botunu token'ın ile başlat
+bot = micup.Bot("senin_bot_tokenin")
 
-if not token:
-    raise SystemExit("❌ MICUP_BOT_TOKEN bulunamadı!")
-
-# Doğru sınıf olan 'Bot' sınıfını kullanıyoruz
-bot = micup.Bot()
-
-@bot.event
-async def on_ready():
-    print(f"✅ Bot başarıyla giriş yaptı!")
-
-bot.run(token)
+# Botu çalıştır
+bot.run()
