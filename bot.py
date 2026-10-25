@@ -17,4 +17,4 @@ async def hazir(b):
 async def ping(msg):
     return "pong"
 
-bot.run(token)
+bot.run()
