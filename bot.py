@@ -7,11 +7,11 @@ token = os.getenv("MICUP_BOT_TOKEN")
 if not token:
     raise SystemExit("❌ MICUP_BOT_TOKEN bulunamadı!")
 
-# Doğru sınıf / fonksiyon çağrısı (küçük harf veya kütüphanenin yapısına göre)
-client = micup.client() # veya kütüphane yapısına göre nesne oluşturma
+# Doğru sınıf olan 'Bot' sınıfını kullanıyoruz
+bot = micup.Bot()
 
-@client.event
+@bot.event
 async def on_ready():
     print(f"✅ Bot başarıyla giriş yaptı!")
 
-client.run(token)
+bot.run(token)
