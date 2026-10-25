@@ -1,0 +1,11 @@
+{
+  "name": "micup-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@discordjs/core": "^2.4.0",
+    "@discordjs/rest": "^2.6.0",
+    "@discordjs/ws": "^2.0.4"
+  }
+}
