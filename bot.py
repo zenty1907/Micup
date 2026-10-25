@@ -1,15 +1,11 @@
 import os
-import micup
+from micup.client import Bot
 
 token = os.environ.get("MICUP_BOT_TOKEN")
+bot = Bot()
 
-if not token:
-    raise SystemExit("❌ MICUP_BOT_TOKEN bulunamadı! Secrets kısmını kontrol et.")
-
-client = micup.Client()
-
-@client.event
+@bot.event
 async def on_ready():
-    print(f"✅ Giriş yapıldı: {client.user}")
+    print(f"✅ Giriş yapıldı: {bot.user}")
 
-client.run(token)
+bot.run(token)
