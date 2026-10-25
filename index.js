@@ -2,7 +2,7 @@ import { Client, GatewayDispatchEvents } from '@discordjs/core';
 import { REST } from '@discordjs/rest';
 import { WebSocketManager } from '@discordjs/ws';
 
-const token = process.env.1563866366481006596.W3kSDCjvFY8NIKdhkJg3b_Y7dCLvGleoFo66ZYCaSmw;
+const token = process.env.MICUP_BOT_TOKEN;
 const API_BASE = 'https://api.micup.gg'; // teyit etmemiz lazım
 
 const rest = new REST({ api: API_BASE, version: '1' }).setToken(token);
