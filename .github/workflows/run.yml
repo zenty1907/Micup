@@ -1,0 +1,29 @@
+name: Botu 7/24 Çalıştır
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *' # Her 6 saatte bir otomatik yeniden tetikler
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Depoyu Kopyala
+      uses: actions/checkout@v3
+
+    - name: Python Kur
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Bağımlılıkları Yükle
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Botu Başlat
+      run: python bot.py
