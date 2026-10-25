@@ -1,7 +1,6 @@
 import os
 import micup
 
-# Token kontrolü
 token = os.getenv("MICUP_BOT_TOKEN")
 
 if not token:
